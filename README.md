@@ -1,36 +1,33 @@
-# 📊 Power BI Project: AdventureWorks Sales Report
+# AdventureWorks Sales Report
 
-This Power BI dashboard was created as part of the [Maven Analytics Power BI Course](https://www.udemy.com/course/microsoft-power-bi-up-running-with-power-bi-desktop/), using the AdventureWorks dataset. The dataset simulates sales data from a global retail company specializing in bicycles, accessories, and related equipment. The goal was to apply real-world reporting skills and build an executive-ready dashboard covering core sales KPIs and visual exploration.
+Power BI report on the AdventureWorks dataset: three years of sales, returns and customer data from a fictional retailer of bikes, accessories and clothing. Built during the [Maven Analytics Power BI course](https://www.udemy.com/course/microsoft-power-bi-up-running-with-power-bi-desktop/).
 
+## Preview
 
-## 🌐 Live Report
-👉 [View interactive Power BI report](https://app.powerbi.com/groups/me/reports/ef034a5d-ea83-47d9-9751-43b168a6c4e0/66e8c2355062e6c0204c?experience=power-bi)
+**Executive overview.** Revenue, profit, orders and return rate, revenue trend, orders by category, top 10 products and month-over-month cards.
 
-## 🔍 Key Insights
-- Sales performance by product category and subcategory
-- Monthly sales trends with year comparison
-- Regional sales breakdown (country-level analysis)
-- Profit margin & revenue correlation
+![Executive overview](docs/images/overview.png)
 
-## 🛠 Tools & Techniques
-- Power BI Desktop
-- Power Query (ETL logic and data shaping)
-- Data Modeling (relationships, star schema design)
-- DAX (custom measures, time intelligence)
-- Slicers, tree maps, clustered bars, line charts
+**Product detail.** Monthly orders, revenue and profit against target, a price adjustment what-if parameter, and a metric selector for the trend chart. Opened by drill-through from the overview.
 
-## 📂 Files
-- `AdventureWorks_Report.pbix` – Final Power BI report
-- `AdventureWorks_Raw_Data.xlsx` – Raw dataset used in the report
-- `AdventureWorks_Images.xlsx` – Sample image links used for visuals
-- `README.md` – Project overview and documentation
+![Product detail](docs/images/products.png)
 
-## 🧾 Conclusion
+**Customer detail.** Unique customers, revenue per customer over time, orders by income level and occupation, and the top 100 customers by revenue.
 
-This project allowed me to apply essential Power BI techniques to a real-world-style dataset.  
-It demonstrates my ability to clean, model, and visualize data effectively to extract actionable business insights.
+![Customer detail](docs/images/customers.png)
 
----
+The report also has a map page with sales by country.
 
+## Built with
 
- 
+- Power Query: cleaning, type fixes and shaping of the raw CSVs
+- Data model: star schema with sales and returns facts and lookup dimensions
+- DAX: core measures, time intelligence (previous month, targets), what-if parameter
+- Report: drill-through, tooltip page, page navigation buttons, slicers
+
+## Files
+
+- `AdventureWorks_Report.pbix`: the report. Opens in Power BI Desktop (free, Windows).
+- `AdventureWorks_Raw_Data/`: source CSVs
+- `AdventureWorks_Images/`: logo and icons used in the report
+- `docs/images/`: screenshots for this README
